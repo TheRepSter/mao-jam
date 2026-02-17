@@ -43,8 +43,8 @@ def module_name_from_path(filepath: str) -> str:
 
 
 def main():
-    # Find all *_strategies.py files recursively, excluding the special ones
-    pattern = "**/*_strategies.py"
+    # Find all *_strategies.py files inside the strategies/ folder
+    pattern = "strategies/**/*_strategies.py"
     all_files = sorted(glob.glob(pattern, recursive=True))
     all_files = [
         f for f in all_files

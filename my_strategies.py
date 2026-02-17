@@ -18,3 +18,14 @@ class MyStrategy1(Strategy):
 
     def discard_card(self, top_card: BaseCard, current_player: int, direction: int) -> BaseCard:
         return None
+
+# You can have as many strategies as you want, just add them here and import them in test_simulator.py
+class MyStrategy2(Strategy):
+    def pick_jump_card(self, top_card: BaseCard, current_player: int, direction: int) -> BaseCard | None:
+        return None
+
+    def pick_play_card(self, top_card: BaseCard, direction: int) -> BaseCard | bool:
+        return None
+
+    def discard_card(self, top_card: BaseCard, current_player: int, direction: int) -> BaseCard:
+        return None

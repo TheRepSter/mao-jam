@@ -10,7 +10,9 @@ Tenim els següents fitxers:
 
 - `base/sim.py`: El simulador. Mucho texto, funciona com hauria de funcionar i si no ho fa digueu-me, continua llegint per saber coses necessàries.
 
-- `remove_junk.sh`: Script simple per eliminar tots els `.log` i `.json` a la carpeta. Important cridar-ho a la carpeta adecuada.
+- `scripts/remove_junk.sh`: Script simple per eliminar tots els `.log` i `.json` a la carpeta. Important cridar-ho a la carpeta adecuada.
+
+- `scripts/update_all_strategies.py` i el que hi ha a `.github/**` es per fer que les PR es facin via jam
 
 ---
 
@@ -28,7 +30,7 @@ Com sap la melmelada de Mao? No ho sé, per això anem a descobrir-ho
 
 ## Funcionament:
 
-`git pull` aquest repo, fas `alies_strategies.py` on `alies` és el teu àlies (nom, username de github, el que tu vulguis), el testejes tot el que vulguis, fas una pullrequest que serà automàticament acceptada si només has editat `alies_strategies.py` o `all_strategies.py`. **Important: ha d'acabar en `_strategies.py`**
+`git pull` aquest repo, fas `strategies/alies_strategies.py` on `alies` és el teu àlies (nom, username de github, el que tu vulguis), el testejes tot el que vulguis, fas una pull request que serà automàticament acceptada si només has editat `strategies/alies_strategies.py`. **Important: ha d'acabar en `_strategies.py` i ha de estar a `strategies/`**
 
 No pots canviar res més (a no ser que sigui un error del simulador que fa algo quan no toca), només allò.
 
@@ -36,7 +38,7 @@ No pots canviar res més (a no ser que sigui un error del simulador que fa algo 
 No n'hi ha. Quan hi vegi un canvi, ho executaré. 
 
 ### Limits:
-No n'hi ha però si veig que triga massa al meu ordinador o no tinc suficient memòria, o el que sigui, ho descartaré.
+No n'hi ha però si veig que triga massa al meu ordinador o no tinc suficient memòria, coses de l'estil, ho descartaré.
 
 ## Leaderboard:
 S'inaugurarà el 23 de febrer. 

@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - "**/*_strategies.py"
+      - "strategies/**/*_strategies.py"
 
 jobs:
   update-strategies:

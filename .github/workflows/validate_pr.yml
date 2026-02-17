@@ -36,8 +36,9 @@ jobs:
           )
           changed = [f.strip() for f in result.stdout.splitlines() if f.strip()]
 
-          PROTECTED_FILES = {"all_strategies.py", "my_strategies.py", "readme.md"}
-          PROTECTED_DIRS  = {"base/", ".github/", "scripts/"}
+          PROTECTED_FILES  = {"all_strategies.py", "my_strategies.py", "readme.md", "simulator_combined_strategies.py", "test_simulator.py"}
+          PROTECTED_DIRS   = {"base/", ".github/", "scripts/"}
+          STRATEGIES_DIR   = "strategies/"
 
           errors = []
           is_simulator_change = False
@@ -49,7 +50,12 @@ jobs:
                   print(f"  ⚠️  '{f}' is a protected file — needs owner review.")
                   continue
 
-              # 2. Must end in _strategies.py
+              # 2. Must be inside the strategies/ folder
+              if not f.startswith(STRATEGIES_DIR):
+                  errors.append(f"❌ '{f}' must be inside the '{STRATEGIES_DIR}' folder.")
+                  continue
+
+              # 3. Must end in _strategies.py
               if not f.endswith("_strategies.py"):
                   errors.append(f"❌ '{f}' must end in '_strategies.py'.")
                   continue
