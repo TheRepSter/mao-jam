@@ -25,7 +25,7 @@ class StratExample(Strategy):
 
     def pick_play_card(self, top_card: BaseCard, direction: int, value_7: int) -> BaseCard | bool:
         for card in self.player.cards:
-            if card.can_be_played(top_card):
+            if card.can_be_played(top_card) and (value_7 == 0 or card.value != 7):
                 return card
         return False
 
