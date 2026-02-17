@@ -127,3 +127,20 @@ jobs:
             --merge \
             --auto \
             --repo ${{ github.repository }}
+
+      - name: Update all_strategies.py
+        if: >
+          success() &&
+          steps.validation.outputs.is_simulator_change == 'false' &&
+          steps.validation.outputs.has_errors == 'false'
+        run: |
+          # Wait a moment for the merge to complete
+          sleep 15
+          git fetch origin main
+          git checkout main
+          python3 scripts/update_all_strategies.py
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add all_strategies.py
+          git diff --cached --quiet || git commit -m "chore: auto-update all_strategies.py [skip ci]"
+          git push

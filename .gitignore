@@ -3,22 +3,23 @@
 !*_strategies.py
 
 !base/
-!base/**
-base/__pycache__/
+!base/*.py
 base/extended_card_class.py
 
 !.github
-!.github/**
+!.github/workflows
+!.github/workflows/validate_pr.yml
 !.gitignore
 
 !README.md
 
 !strategies/
 !strategies/**
-strategies/__pycache__/
+strategies/**/*.py
 
 !scripts/
-!scripts/**
+!scripts/update_all_strategies.py
+!scripts/remove_junk.sh
 
 !test_simulator.py
 !all_strategies.py
