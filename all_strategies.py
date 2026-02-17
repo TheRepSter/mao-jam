@@ -1,10 +1,11 @@
+# This file is auto-generated. Do not edit manually.
+# Run scripts/update_all_strategies.py to regenerate.
+
 from base.classes import FirstStrategy, RandomStrategy
 
-# Please, add your strategy here as you did on test_simulator.py
-# Example:
-# from RepSter_Strategy import BogoSorter_Strategy
+# No user strategies found.
 
 strategies = [
-    FirstStrategy, # FirstStrategy is the default strategy
-    # BogoSorter_Strategy, # BogoSorter_Strategy is an example of a strategy, don't uncomment it
+    FirstStrategy,
+    RandomStrategy,
 ]
