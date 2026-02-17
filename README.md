@@ -30,7 +30,7 @@ Com sap la melmelada de Mao? No ho sé, per això anem a descobrir-ho
 
 ## Funcionament:
 
-`git pull` aquest repo, fas `strategies/alies_strategies.py` on `alies` és el teu àlies (nom, username de github, el que tu vulguis), el testejes tot el que vulguis, fas una pull request que serà automàticament acceptada si només has editat `strategies/alies_strategies.py`. **Important: ha d'acabar en `_strategies.py` i ha de estar a `strategies/`**
+`git pull` aquest repo, fas `strategies/alies_strategies.py` on `alies` és el teu àlies (nom, username de github, el que tu vulguis), ho fas com al template (`my_strategies.py`), el testejes tot el que vulguis, i fas una pull request que serà automàticament acceptada si només has editat `strategies/alies_strategies.py`. **Important: ha d'acabar en `_strategies.py` i ha de estar a `strategies/`**
 
 No pots canviar res més (a no ser que sigui un error del simulador que fa algo quan no toca), només allò.
 

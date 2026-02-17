@@ -13,6 +13,9 @@ base/extended_card_class.py
 
 !README.md
 
+!strategies/
+!strategies/**
+
 !scripts/
 !scripts/**
 
