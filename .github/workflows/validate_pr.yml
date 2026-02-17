@@ -7,6 +7,9 @@ on:
 jobs:
   validate:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
       - name: Checkout (with full history)
         uses: actions/checkout@v4
@@ -14,6 +17,7 @@ jobs:
           fetch-depth: 0
 
       - name: Validate changed files
+        id: validation
         env:
           PR_AUTHOR: ${{ github.event.pull_request.user.login }}
           BASE_REF: ${{ github.base_ref }}
@@ -26,26 +30,23 @@ jobs:
           author = os.environ["PR_AUTHOR"].lower()
           base_ref = os.environ["BASE_REF"]
 
-          # Get list of changed files in this PR
           result = subprocess.run(
               ["git", "diff", "--name-only", f"origin/{base_ref}...HEAD"],
               capture_output=True, text=True
           )
           changed = [f.strip() for f in result.stdout.splitlines() if f.strip()]
 
-          # Files and directories that can never be touched via PR
           PROTECTED_FILES = {"all_strategies.py", "my_strategies.py", "readme.md"}
           PROTECTED_DIRS  = {"base/", ".github/", "scripts/"}
 
           errors = []
+          is_simulator_change = False
 
           for f in changed:
-              # 1. Protected files/dirs
-              if f in PROTECTED_FILES:
-                  errors.append(f"❌ '{f}' is protected and cannot be modified.")
-                  continue
-              if any(f.startswith(d) for d in PROTECTED_DIRS):
-                  errors.append(f"❌ '{f}' is inside a protected directory.")
+              # 1. Detect simulator/protected changes — flag but don't error
+              if f in PROTECTED_FILES or any(f.startswith(d) for d in PROTECTED_DIRS):
+                  is_simulator_change = True
+                  print(f"  ⚠️  '{f}' is a protected file — needs owner review.")
                   continue
 
               # 2. Must end in _strategies.py
@@ -53,9 +54,7 @@ jobs:
                   errors.append(f"❌ '{f}' must end in '_strategies.py'.")
                   continue
 
-              # 3. Check ownership via git history.
-              #    If the file already exists in the base branch, the first commit
-              #    that introduced it must belong to the PR author.
+              # 3. Check ownership via git history
               log = subprocess.run(
                   ["git", "log", "--follow", "--diff-filter=A",
                    "--format=%ae %an", f"origin/{base_ref}", "--", f],
@@ -64,9 +63,6 @@ jobs:
               first_commit_info = log.stdout.strip()
 
               if first_commit_info:
-                  # File already exists — check original author.
-                  # GitHub sets email as {username}@users.noreply.github.com,
-                  # so checking if the username appears in email/name is enough.
                   if author not in first_commit_info.lower():
                       errors.append(
                           f"❌ '{f}' was created by someone else. "
@@ -75,13 +71,41 @@ jobs:
                   else:
                       print(f"  ✅ '{f}' ownership confirmed for '{author}'.")
               else:
-                  # File is new in this PR — always allowed
                   print(f"  ✅ '{f}' is a new file, no ownership check needed.")
+
+          env_file = os.environ.get("GITHUB_OUTPUT", "/dev/null")
+          with open(env_file, "a") as out:
+              out.write(f"is_simulator_change={'true' if is_simulator_change else 'false'}\n")
+              out.write(f"has_errors={'true' if errors else 'false'}\n")
 
           if errors:
               print("\nValidation failed:")
               print("\n".join(errors))
               sys.exit(1)
+          elif is_simulator_change:
+              print(f"\n⚠️  PR contains protected file changes — flagging for manual review.")
           else:
               print(f"\n✅ All {len(changed)} file(s) validated for user '{author}'.")
           PYEOF
+
+      - name: Label as simulator change (needs review)
+        if: steps.validation.outputs.is_simulator_change == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr edit ${{ github.event.pull_request.number }} \
+            --add-label "simulator-change" \
+            --repo ${{ github.repository }}
+          echo "🏷️  Label 'simulator-change' added. Waiting for owner review."
+
+      - name: Auto-merge PR (only if no protected files touched)
+        if: >
+          success() &&
+          steps.validation.outputs.is_simulator_change == 'false' &&
+          steps.validation.outputs.has_errors == 'false'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr merge ${{ github.event.pull_request.number }} \
+            --merge \
+            --repo ${{ github.repository }}
