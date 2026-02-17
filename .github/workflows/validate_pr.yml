@@ -133,9 +133,10 @@ jobs:
           success() &&
           steps.validation.outputs.is_simulator_change == 'false' &&
           steps.validation.outputs.has_errors == 'false'
+        env:
+          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
         run: |
-          # Wait a moment for the merge to complete
-          sleep 15
+          sleep 5
           git fetch origin main
           git checkout main
           python3 scripts/update_all_strategies.py
@@ -143,4 +144,5 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add all_strategies.py
           git diff --cached --quiet || git commit -m "chore: auto-update all_strategies.py [skip ci]"
+          git remote set-url origin https://x-access-token:${PAT_TOKEN}@github.com/${{ github.repository }}
           git push

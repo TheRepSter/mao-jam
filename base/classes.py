@@ -96,7 +96,7 @@ class Strategy(ABC):
     def __repr__(self) -> str:
         return f"{self.__class__.__name__}()"
     
-    def cards_not_viewed(self) -> Deck[BaseCard]:
+    def cards_not_viewed(self) -> Deck:
         """Return the cards that the player has not seen. Notice this means the player hand is also not viewed."""
         not_viewed = Deck()
         cards_viewed = self.player.cards + self.discarded_pile.cards
