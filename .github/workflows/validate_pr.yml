@@ -1,0 +1,87 @@
+name: Validate PR
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (with full history)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Validate changed files
+        env:
+          PR_AUTHOR: ${{ github.event.pull_request.user.login }}
+          BASE_REF: ${{ github.base_ref }}
+        run: |
+          python3 - <<'PYEOF'
+          import os
+          import subprocess
+          import sys
+
+          author = os.environ["PR_AUTHOR"].lower()
+          base_ref = os.environ["BASE_REF"]
+
+          # Get list of changed files in this PR
+          result = subprocess.run(
+              ["git", "diff", "--name-only", f"origin/{base_ref}...HEAD"],
+              capture_output=True, text=True
+          )
+          changed = [f.strip() for f in result.stdout.splitlines() if f.strip()]
+
+          # Files and directories that can never be touched via PR
+          PROTECTED_FILES = {"all_strategies.py", "my_strategies.py", "readme.md"}
+          PROTECTED_DIRS  = {"base/", ".github/", "scripts/"}
+
+          errors = []
+
+          for f in changed:
+              # 1. Protected files/dirs
+              if f in PROTECTED_FILES:
+                  errors.append(f"❌ '{f}' is protected and cannot be modified.")
+                  continue
+              if any(f.startswith(d) for d in PROTECTED_DIRS):
+                  errors.append(f"❌ '{f}' is inside a protected directory.")
+                  continue
+
+              # 2. Must end in _strategies.py
+              if not f.endswith("_strategies.py"):
+                  errors.append(f"❌ '{f}' must end in '_strategies.py'.")
+                  continue
+
+              # 3. Check ownership via git history.
+              #    If the file already exists in the base branch, the first commit
+              #    that introduced it must belong to the PR author.
+              log = subprocess.run(
+                  ["git", "log", "--follow", "--diff-filter=A",
+                   "--format=%ae %an", f"origin/{base_ref}", "--", f],
+                  capture_output=True, text=True
+              )
+              first_commit_info = log.stdout.strip()
+
+              if first_commit_info:
+                  # File already exists — check original author.
+                  # GitHub sets email as {username}@users.noreply.github.com,
+                  # so checking if the username appears in email/name is enough.
+                  if author not in first_commit_info.lower():
+                      errors.append(
+                          f"❌ '{f}' was created by someone else. "
+                          f"You can only edit files you created yourself."
+                      )
+                  else:
+                      print(f"  ✅ '{f}' ownership confirmed for '{author}'.")
+              else:
+                  # File is new in this PR — always allowed
+                  print(f"  ✅ '{f}' is a new file, no ownership check needed.")
+
+          if errors:
+              print("\nValidation failed:")
+              print("\n".join(errors))
+              sys.exit(1)
+          else:
+              print(f"\n✅ All {len(changed)} file(s) validated for user '{author}'.")
+          PYEOF

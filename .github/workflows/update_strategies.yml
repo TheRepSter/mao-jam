@@ -1,0 +1,35 @@
+name: Update all_strategies.py
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "**/*_strategies.py"
+
+jobs:
+  update-strategies:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run update script
+        run: python3 scripts/update_all_strategies.py
+
+      - name: Commit updated all_strategies.py
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add all_strategies.py
+          # Only commit if there are actual changes
+          git diff --cached --quiet || git commit -m "chore: auto-update all_strategies.py [skip ci]"
+          git push
