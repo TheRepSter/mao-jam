@@ -3,9 +3,10 @@
 
 from base.classes import FirstStrategy, RandomStrategy
 
-# No user strategies found.
+from strategies.repster_strategies import StratExample
 
 strategies = [
     FirstStrategy,
     RandomStrategy,
+    StratExample,
 ]
