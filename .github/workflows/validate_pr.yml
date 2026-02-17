@@ -21,6 +21,8 @@ jobs:
         env:
           PR_AUTHOR: ${{ github.event.pull_request.user.login }}
           BASE_REF: ${{ github.base_ref }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python3 - <<'PYEOF'
           import os
@@ -60,23 +62,32 @@ jobs:
                   errors.append(f"❌ '{f}' must end in '_strategies.py'.")
                   continue
 
-              # 3. Check ownership via git history
+              # 4. Check ownership via GitHub API (uses actual GitHub login, not email)
               log = subprocess.run(
                   ["git", "log", "--follow", "--diff-filter=A",
-                   "--format=%ae %an", f"origin/{base_ref}", "--", f],
+                   "--format=%H", f"origin/{base_ref}", "--", f],
                   capture_output=True, text=True
               )
-              first_commit_info = log.stdout.strip()
+              first_commit_sha = log.stdout.strip()
 
-              if first_commit_info:
-                  if author not in first_commit_info.lower():
+              if first_commit_sha:
+                  # File already exists in base — check original author via API
+                  repo = os.environ["GITHUB_REPOSITORY"]
+                  api = subprocess.run(
+                      ["gh", "api", f"repos/{repo}/commits/{first_commit_sha}",
+                       "--jq", ".author.login"],
+                      capture_output=True, text=True
+                  )
+                  original_author = api.stdout.strip().lower()
+                  if original_author != author:
                       errors.append(
-                          f"❌ '{f}' was created by someone else. "
+                          f"❌ '{f}' was created by '{original_author}'. "
                           f"You can only edit files you created yourself."
                       )
                   else:
                       print(f"  ✅ '{f}' ownership confirmed for '{author}'.")
               else:
+                  # File is new in this PR — always allowed
                   print(f"  ✅ '{f}' is a new file, no ownership check needed.")
 
           env_file = os.environ.get("GITHUB_OUTPUT", "/dev/null")
@@ -89,14 +100,13 @@ jobs:
               print("\n".join(errors))
               sys.exit(1)
           elif is_simulator_change:
-              print(f"\n❌ PR contains protected file changes — only the repo owner can merge these manually.")
-              sys.exit(1)
+              print(f"\n⚠️  PR contains protected file changes — label added, waiting for owner to merge manually.")
           else:
               print(f"\n✅ All {len(changed)} file(s) validated for user '{author}'.")
           PYEOF
 
       - name: Label as simulator change (needs review)
-        if: steps.validation.outputs.is_simulator_change == 'true'
+        if: always() && steps.validation.outputs.is_simulator_change == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |

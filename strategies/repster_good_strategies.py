@@ -30,4 +30,7 @@ class StratExample(Strategy):
         return False
 
     def discard_card(self, top_card: BaseCard, current_player: int, direction: int, value_7: int) -> BaseCard:
+        for card in self.player.cards:
+            if card.value == 7:
+                return card
         return self.player.cards[0]
