@@ -43,9 +43,10 @@ def module_name_from_path(filepath: str) -> str:
 
 
 def main():
-    # Find all *_strategies.py files inside the strategies/ folder
-    pattern = "strategies/**/*_strategies.py"
-    all_files = sorted(glob.glob(pattern, recursive=True))
+    # Find all *_strategies.py files inside the strategies/ folder (at any depth)
+    files_root    = glob.glob("strategies/*_strategies.py")
+    files_nested  = glob.glob("strategies/**/*_strategies.py", recursive=True)
+    all_files = sorted(set(files_root + files_nested))
     all_files = [
         f for f in all_files
         if os.path.basename(f) not in EXCLUDED
