@@ -134,7 +134,7 @@ jobs:
           steps.validation.outputs.is_simulator_change == 'false' &&
           steps.validation.outputs.has_errors == 'false'
         env:
-          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
+          GH_TOKEN: ${{ secrets.PAT_TOKEN }}
         run: |
           sleep 5
           git fetch origin main
@@ -142,7 +142,27 @@ jobs:
           python3 scripts/update_all_strategies.py
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # If no changes, nothing to do
+          git diff --quiet all_strategies.py && echo "No changes to all_strategies.py" && exit 0
+
+          # Push to a temp branch and auto-merge
+          BRANCH="bot/update-all-strategies-$(date +%s)"
+          git checkout -b "$BRANCH"
           git add all_strategies.py
-          git diff --cached --quiet || git commit -m "chore: auto-update all_strategies.py [skip ci]"
-          git remote set-url origin https://x-access-token:${PAT_TOKEN}@github.com/${{ github.repository }}
-          git push
+          git commit -m "chore: auto-update all_strategies.py"
+          git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}
+          git push origin "$BRANCH"
+
+          gh pr create \
+            --title "chore: auto-update all_strategies.py" \
+            --body "Automatic update of all_strategies.py after strategy merge." \
+            --base main \
+            --head "$BRANCH" \
+            --repo ${{ github.repository }}
+
+          PR_NUMBER=$(gh pr list --head "$BRANCH" --json number --jq '.[0].number' --repo ${{ github.repository }})
+          gh pr merge "$PR_NUMBER" \
+            --merge \
+            --admin \
+            --repo ${{ github.repository }}
