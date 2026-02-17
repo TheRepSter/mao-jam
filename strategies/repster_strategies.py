@@ -24,10 +24,13 @@ class StratExample(Strategy):
             return None
 
     def pick_play_card(self, top_card: BaseCard, direction: int, value_7: int) -> BaseCard | bool:
+        could_play = False
         for card in self.player.cards:
+            if card.can_be_played(top_card):
+                could_play = True
             if card.can_be_played(top_card) and (value_7 == 0 or card.value != 7):
                 return card
-        return False
+        return could_play
 
     def discard_card(self, top_card: BaseCard, current_player: int, direction: int, value_7: int) -> BaseCard:
         for card in self.player.cards:
