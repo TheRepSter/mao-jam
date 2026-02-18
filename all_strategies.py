@@ -9,4 +9,5 @@ strategies = [
     FirstStrategy,
     RandomStrategy,
     StratExample,
+    ArnauStrategy
 ]
