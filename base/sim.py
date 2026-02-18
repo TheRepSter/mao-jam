@@ -57,14 +57,19 @@ def _print_final_stats(
     string_prob = "Final probabilities:\n"
     _, maximo_mostra, _ = max(cards_prob.values(), key=lambda x: x[1])
     _, _, maximo_picades = max(cards_prob.values(), key=lambda x: x[2])
+    cartes_mostrades = 0
+    all_mostres = 0
     for prob in sorted(cards_prob.keys()):
         total_mostra = cards_prob[prob][1]
+        cartes_mostrades += prob * total_mostra
+        all_mostres += total_mostra
         prob_jugable = cards_prob[prob][0] / total_mostra if total_mostra else 0.0
         string_prob += (
             f"\tAmb {prob:2d} cartes: {prob_jugable:.8f} "
             f"amb {cards_prob[prob][2]:{len(str(maximo_picades))}d} picades (mostra {total_mostra:{len(str(maximo_mostra))}d})\n"
         )
     log.info(string_prob)
+    log.info(f"Mitjana de cartes: {cartes_mostrades / all_mostres}")
 
     if pauses:
         sum_pauses = [0 for _ in range(num_players)]
