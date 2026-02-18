@@ -19,7 +19,7 @@ for i in range(2, len(strategies) + 1):
     for combination in combinations(strategies, i):
         run_simulation(
             n=i,
-            iter_max=int(1e5),
+            iter_max=int(1e7),
             num_decks=2,
             build_deck=build_deck,
             strategies_to_call=combination,
@@ -32,6 +32,6 @@ for i in range(2, len(strategies) + 1):
             combination_data = json.load(f)
             maos = combination_data["maos"]
             max_maos = max(enumerate(maos), key=lambda x: x[1])[0]
-            log.info(f"Simulated combination: {' vs '.join(names)}")
-            log.info(f"Maos: {maos}")
-            log.info(f"Strategy {names[max_maos]} has won the most games with {maos[max_maos]} games, congratulations!")
+            log.log(25, f"Simulated combination: {' vs '.join(names)}")
+            log.log(25, f"Maos: {maos}")
+            log.log(25, f"Strategy {names[max_maos]} has won the most games with {maos[max_maos]} games, congratulations!")
