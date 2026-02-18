@@ -121,11 +121,11 @@ jobs:
           steps.validation.outputs.is_simulator_change == 'false' &&
           steps.validation.outputs.has_errors == 'false'
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.PAT_TOKEN }}
         run: |
           gh pr merge ${{ github.event.pull_request.number }} \
             --merge \
-            --auto \
+            --admin \
             --repo ${{ github.repository }}
 
       - name: Update all_strategies.py
