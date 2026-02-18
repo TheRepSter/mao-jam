@@ -19,11 +19,13 @@ for i in range(2, len(strategies) + 1):
     for combination in combinations(strategies, i):
         run_simulation(
             n=i,
-            iter_max=int(1e3),
+            iter_max=int(1e5),
             num_decks=2,
             build_deck=build_deck,
             strategies_to_call=combination,
-            log_ignores_wrong_cards=True
+            log_ignores_wrong_cards=True,
+            random_first_player=True,
+            random_position_players=True,
         )
         names = [strategy.__name__ for strategy in combination]
         with open(f"simulator_combined_strategies_{i}_2_{'_'.join(names)}.json", "r") as f:

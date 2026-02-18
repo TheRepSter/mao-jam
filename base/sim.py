@@ -100,11 +100,13 @@ def pausa(
     for i in range(n):
         while num_cards_per_player[i] > 5:
             card_to_discard = strategies[i].discard_card(top_card, current_player, direction, value_7)
-            discard_pile.add_card(card_to_discard)
+            main_pile.add_card(card_to_discard) # canvi de discard_pile a main_pile per fer que no tinguin extra info de descartar la resta.
             players[i].remove_card(card_to_discard)
             num_cards_per_player[i] -= 1
             log.debug(f"Player {i} ha descartat {str(card_to_discard)}")
-    main_pile.shuffle()
+    while len(main_pile) > 0:
+        discard_pile.add_card(main_pile.remove_top_card())
+    discard_pile.shuffle()
     pauses.append(to_append)
     return main_pile, discard_pile
 
@@ -116,6 +118,8 @@ def run_simulation(
     build_deck: Callable[[Deck, int], None],
     strategies_to_call: list[type[Strategy]],
     log_ignores_wrong_cards: bool = False,
+    random_first_player: bool = False,
+    random_position_players: bool = False,
 ) -> None:
     debug_mode = iter_max == 1
     t0 = time.perf_counter()
@@ -147,6 +151,7 @@ def run_simulation(
     num_avis = min(int(iter_max / 10), 1_000_000) if not debug_mode else 1
     won_last_time = 0
     player_indexes = list(range(n))
+    seat_to_player_id = list(range(n))
     stop_after_current_game = False
 
     def _handle_sigint(_signum, _frame):
@@ -170,7 +175,10 @@ def run_simulation(
                     num_cards_per_player[i] += 1
             top_card = main_pile.remove_top_card()
             has_winner = False
-            current_player = random.randint(0, n-1) # Could have some "first player" advantage.
+            if random_first_player:
+                current_player = random.randint(0, n-1) # Could have some "first player" advantage.
+            else:
+                current_player = 0
             direction = 1
             value_7 = 0
             log.debug(f"Top card: {top_card}")
@@ -288,7 +296,8 @@ def run_simulation(
                             log.debug(f"Iter {iter_number}: Player {i} diu mao!")
                         break
 
-            maos[current_player] += 1
+            winner_player_id = seat_to_player_id[current_player]
+            maos[winner_player_id] += 1
             iter_partides.append(iter_number - won_last_time)
             won_last_time = iter_number
             for i in range(n):
@@ -298,6 +307,13 @@ def run_simulation(
             while len(discard_pile):
                 main_pile.add_card(discard_pile.remove_top_card())
             main_pile.add_card(top_card)
+
+            if random_position_players:
+                shuffled_positions = list(zip(players, strategies, seat_to_player_id))
+                random.shuffle(shuffled_positions)
+                players, strategies, seat_to_player_id = map(list, zip(*shuffled_positions))
+                for i, strategy in enumerate(strategies):
+                    strategy.player_index = i
 
             if stop_after_current_game:
                 break
