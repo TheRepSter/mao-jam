@@ -20,8 +20,8 @@ def build_deck(main_pile, num_decks: int):
 
 run_simulation(
     n=N,
-    iter_max=int(1e8),
-    num_decks=1,
+    iter_max=int(1e7),
+    num_decks=2,
     build_deck=build_deck,
     strategies_to_call = [MyStrategy1] + [FirstStrategy] * (N-1),
 )
