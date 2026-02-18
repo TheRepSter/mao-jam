@@ -12,6 +12,8 @@ base/extended_card_class.py
 !.gitignore
 
 !README.md
+!docker-compose.yml
+!Dockerfile
 
 !strategies/
 !strategies/**

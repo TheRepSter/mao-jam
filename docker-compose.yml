@@ -1,0 +1,19 @@
+services:
+  mao_simulator:
+    build: .
+    volumes:
+      - .:/app
+    tty: true
+    stdin_open: true
+    environment:
+      - PYTHONPATH=.
+    command: bash -c "python3 scripts/update_all_strategies.py && python3 simulator_combined_strategies.py"
+  mao-ml:
+    build: .
+    volumes:
+      - .:/app
+    #tty: true
+    #stdin_open: true
+    environment:
+      - PYTHONPATH=.
+    command: bash -c "python3 ML/train.py --opponent ultimate --episodes 1000 && python3 ML/evaluate.py --opponent ultimate --games 100"
