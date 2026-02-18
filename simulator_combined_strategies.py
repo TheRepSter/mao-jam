@@ -7,7 +7,6 @@ import json
 import time
 t0 = time.perf_counter()
 log = get_elapsed_logger(t0, "Results.txt", results=True, debugging=False, name="simulator_combined_strategies")
-file = open("Results.txt", "w")
 
 def build_deck(main_pile, num_decks: int):
     suits = ["hearts", "diamonds", "clubs", "spades"]
@@ -27,15 +26,10 @@ for i in range(2, len(strategies) + 1):
             log_ignores_wrong_cards=True
         )
         names = [strategy.__name__ for strategy in combination]
-        file.write(f"Simulated combination: {' vs '.join(names)}\n")
         with open(f"simulator_combined_strategies_{i}_2_{'_'.join(names)}.json", "r") as f:
             combination_data = json.load(f)
             maos = combination_data["maos"]
-            file.write(f"Maos: {maos}\n")
             max_maos = max(enumerate(maos), key=lambda x: x[1])[0]
-            file.write(f"Strategy {names[max_maos]} has won the most games with {maos[max_maos]} games, congratulations!\n")
-            file.flush()
-            print(f"Simulated combination: {' vs '.join(names)}")
-            print(f"Maos: {maos}")
-            print(f"Strategy {names[max_maos]} has won the most games with {maos[max_maos]} games, congratulations!")
-file.close()
+            log.info(f"Simulated combination: {' vs '.join(names)}")
+            log.info(f"Maos: {maos}")
+            log.info(f"Strategy {names[max_maos]} has won the most games with {maos[max_maos]} games, congratulations!")
