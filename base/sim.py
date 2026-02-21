@@ -102,7 +102,7 @@ def pausa(
     seat_to_player_id: list[int],
 ) -> tuple[Deck, Deck]:
     log.debug(f"Iter {iter_number}: Entrem a la pausa!")
-    to_append = [0 for _ in range(n)]
+    to_append = [0] * n
     for seat in range(n):
         to_append[seat_to_player_id[seat]] = num_cards_per_player[seat]
     for i in range(n):
