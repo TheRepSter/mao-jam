@@ -1,6 +1,5 @@
 from base.classes import NormalCard, FirstStrategy, RandomStrategy
 from base.sim import run_simulation
-from strategies.feluk_normal_strategies import FElixSuper1
 
 # Please, change 'my' to your alias, and 'MyStrategy' to your strategy class name
 # Example: 
@@ -21,10 +20,10 @@ def build_deck(main_pile, num_decks: int):
 
 run_simulation(
     n=N,
-    iter_max=int(1e6),
+    iter_max=int(1e7),
     num_decks=2,
     build_deck=build_deck,
-    strategies_to_call = [FElixSuper1] + [FirstStrategy] * (N-1),
+    strategies_to_call = [MyStrategy1] + [FirstStrategy] * (N-1),
 )
 
 # Not recommended, as you will always win (if your strategy isn't more random than this)
