@@ -91,7 +91,6 @@ def _simulate_game(start_player, my_index, num_players, hands, deck, top_card, d
     return False
 
 
-
 MAX_PLAYERS = 15 # Hoping que no hi hagui més, si no em mato lol 
 OBS_SIZE = 140
 MAX_ACTIONS = 53
@@ -682,7 +681,7 @@ def _find_card(cards: list[BaseCard], type_id: int) -> BaseCard | None:
     return None
 
 
-class NeuralStrategy(Strategy):
+class AlphaMao(Strategy):
     def __init__(self, player, discard_pile, player_index, number_of_players,
                  build_deck, num_decks, num_cards_per_player):
         super().__init__(player, discard_pile, player_index, number_of_players,
