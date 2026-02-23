@@ -3,6 +3,8 @@ from base.logger import get_elapsed_logger
 from base.sim import run_simulation
 from all_strategies import strategies
 from concurrent.futures import ProcessPoolExecutor, as_completed
+from scipy.stats import chisquare, binomtest
+import numpy as np
 from itertools import combinations
 import json
 import multiprocessing
@@ -11,9 +13,36 @@ import time
 
 
 ITER_PER_SIM = int(1e7)
+EXTRA_ITERS = int(1e6)
+MAX_EXTRA_ROUNDS = 100
 NUM_DECKS = 2
 
 wins = {strategy.__name__: 0 for strategy in strategies}
+
+
+def _check_significance(maos: list[int]) -> tuple[bool, float, float, float]:
+    """Returns (is_significant, p_bond, p_without_worst, p_best_vs_second)."""
+    maos_np = np.array(maos)
+    n_players = len(maos)
+    total = maos_np.sum()
+    expected = np.full(n_players, total / n_players)
+    _, p_bond = chisquare(maos_np, expected)
+
+    sorted_indices = np.argsort(maos)
+    worst = sorted_indices[0]
+    best = sorted_indices[-1]
+    second_best = sorted_indices[-2]
+
+    maos_np_without_worst = np.delete(maos_np, worst)
+    total_without_worst = maos_np_without_worst.sum()
+    expected_without_worst = np.full(n_players - 1, total_without_worst / (n_players - 1))
+    _, p_without_worst = chisquare(maos_np_without_worst, expected_without_worst)
+
+    test = binomtest(int(maos[best]), int(maos[best]) + int(maos[second_best]), alternative="two-sided")
+    p_best_vs_second = test.pvalue
+
+    is_significant = p_bond <= 0.05 and p_without_worst <= 0.05 and p_best_vs_second <= 0.05
+    return is_significant, p_bond, p_without_worst, p_best_vs_second
 
 
 def build_deck(main_pile, num_decks: int):
@@ -28,35 +57,46 @@ def _run_matchup_worker(
     combo_names: tuple[str, ...],
     iters: int,
     num_decks: int,
-) -> tuple[tuple[str, ...], list[int]]:
-    """Worker subprocess: runs one matchup simulation and returns (combo_names, maos)."""
+) -> tuple[tuple[str, ...], list[int], int]:
+    """Worker subprocess: runs one matchup simulation, retrying with extra iterations
+    until the result is statistically significant or MAX_EXTRA_ROUNDS is reached.
+    Returns (combo_names, accumulated_maos, extra_rounds_run)."""
     from all_strategies import strategies as _all_strategies
 
     strategy_map = {s.__name__: s for s in _all_strategies}
     combination = tuple(strategy_map[name] for name in combo_names)
     n = len(combination)
-
-    run_simulation(
-        n=n,
-        iter_max=iters,
-        num_decks=num_decks,
-        build_deck=build_deck,
-        strategies_to_call=combination,
-        log_ignores_wrong_cards=True,
-        random_first_player=True,
-        random_position_players=True,
-    )
-
     json_name = f"simulator_combined_strategies_{n}_{num_decks}_{'_'.join(combo_names)}.json"
-    try:
-        with open(json_name, "r") as f:
-            data = json.load(f)
-        maos = data["maos"]
-    finally:
-        if os.path.exists(json_name):
-            os.remove(json_name)
 
-    return combo_names, maos
+    def _run_and_read(iter_count: int) -> list[int]:
+        run_simulation(
+            n=n,
+            iter_max=iter_count,
+            num_decks=num_decks,
+            build_deck=build_deck,
+            strategies_to_call=combination,
+            log_ignores_wrong_cards=True,
+            random_first_player=True,
+            random_position_players=True,
+        )
+        try:
+            with open(json_name, "r") as f:
+                data = json.load(f)
+            return data["maos"]
+        finally:
+            if os.path.exists(json_name):
+                os.remove(json_name)
+
+    accumulated_maos = _run_and_read(iters)
+
+    extra_rounds = 0
+    while not _check_significance(accumulated_maos)[0] and extra_rounds < MAX_EXTRA_ROUNDS:
+        log.log(25, f"Extra round number {extra_rounds + 1} for combination: {' vs '.join(combo_names)}")
+        extra_rounds += 1
+        extra_maos = _run_and_read(EXTRA_ITERS)
+        accumulated_maos = [a + e for a, e in zip(accumulated_maos, extra_maos)]
+
+    return combo_names, accumulated_maos, extra_rounds
 
 
 if __name__ == "__main__":
@@ -86,14 +126,28 @@ if __name__ == "__main__":
         }
 
         for future in as_completed(future_to_names):
-            combo_names, maos = future.result()
+            combo_names, maos, extra_rounds = future.result()
             names = list(combo_names)
-            max_maos = max(enumerate(maos), key=lambda x: x[1])[0]
+            sorted_indices = np.argsort(maos)
+            max_maos = sorted_indices[-1]
+            worst_maos = sorted_indices[0]
             wins[names[max_maos]] += 1
-            log.log(25, f"Simulated combination: {' vs '.join(names)}")
-            log.log(25, f"Maos: {maos}")
-            log.log(25, f"Strategy {names[max_maos]} has won the most games with {maos[max_maos]} games, congratulations!")
 
+            is_significant, p_bond, p_without_worst, p_best_vs_second = _check_significance(maos)
+            total_iters = ITER_PER_SIM + extra_rounds * EXTRA_ITERS
+
+            log.log(25, f"Simulated combination: {' vs '.join(names)}")
+            log.log(25, f"Maos: {maos} (total iters: {total_iters:,}, extra rounds: {extra_rounds})")
+            if not is_significant:
+                log.warning(
+                    f"Strategy {names[max_maos]} has won the most games with {maos[max_maos]} games "
+                    f"after {extra_rounds} extra round(s), BUT IT'S STILL NOT SIGNIFICANTLY DIFFERENT "
+                    f"(cap of {MAX_EXTRA_ROUNDS} extra rounds reached). "
+                    f"P-values — bond: {p_bond:.4f}, without worst: {p_without_worst:.4f}, best vs second: {p_best_vs_second:.4f}"
+                )
+            else:
+                extra_note = f" (needed {extra_rounds} extra round(s) of {EXTRA_ITERS:,} iters)" if extra_rounds > 0 else ""
+                log.log(25, f"Strategy {names[max_maos]} has won the most games with {maos[max_maos]} games, congratulations!{extra_note}")
     log.log(25, "FINAL RESULTS:")
     for strategy, win_count in sorted(wins.items(), key=lambda x: x[1], reverse=True):
         log.log(25, f"{strategy}: {win_count}")
