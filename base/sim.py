@@ -57,14 +57,19 @@ def _print_final_stats(
     string_prob = "Final probabilities:\n"
     _, maximo_mostra, _ = max(cards_prob.values(), key=lambda x: x[1])
     _, _, maximo_picades = max(cards_prob.values(), key=lambda x: x[2])
+    cartes_mostrades = 0
+    all_mostres = 0
     for prob in sorted(cards_prob.keys()):
         total_mostra = cards_prob[prob][1]
+        cartes_mostrades += prob * total_mostra
+        all_mostres += total_mostra
         prob_jugable = cards_prob[prob][0] / total_mostra if total_mostra else 0.0
         string_prob += (
             f"\tAmb {prob:2d} cartes: {prob_jugable:.8f} "
             f"amb {cards_prob[prob][2]:{len(str(maximo_picades))}d} picades (mostra {total_mostra:{len(str(maximo_mostra))}d})\n"
         )
     log.info(string_prob)
+    log.info(f"Mitjana de cartes: {cartes_mostrades / all_mostres}")
 
     if pauses:
         sum_pauses = [0 for _ in range(num_players)]
@@ -94,9 +99,12 @@ def pausa(
     pauses: list[list[int]],
     num_cards_per_player: list[int],
     value_7: int,
+    seat_to_player_id: list[int],
 ) -> tuple[Deck, Deck]:
     log.debug(f"Iter {iter_number}: Entrem a la pausa!")
-    to_append = num_cards_per_player.copy()
+    to_append = [0] * n
+    for seat in range(n):
+        to_append[seat_to_player_id[seat]] = num_cards_per_player[seat]
     for i in range(n):
         while num_cards_per_player[i] > 5:
             card_to_discard = strategies[i].discard_card(top_card, current_player, direction, value_7)
@@ -226,7 +234,7 @@ def run_simulation(
                         players[current_player].add_card(main_pile.remove_top_card())
                         num_cards_per_player[current_player] += 1
                         if len(main_pile) == 0:
-                            discard_pile, main_pile = pausa(log, iter_number, n, players, strategies, top_card, discard_pile, main_pile, current_player, direction, pauses, num_cards_per_player, value_7)
+                            discard_pile, main_pile = pausa(log, iter_number, n, players, strategies, top_card, discard_pile, main_pile, current_player, direction, pauses, num_cards_per_player, value_7, seat_to_player_id)
                         continue
                         
                     current_prob[0] += 1
@@ -265,7 +273,7 @@ def run_simulation(
                 current_player = (current_player + direction) % n
 
                 if len(main_pile) == 0:
-                    discard_pile, main_pile = pausa(log, iter_number, n, players, strategies, top_card, discard_pile, main_pile, current_player, direction, pauses, num_cards_per_player, value_7)
+                    discard_pile, main_pile = pausa(log, iter_number, n, players, strategies, top_card, discard_pile, main_pile, current_player, direction, pauses, num_cards_per_player, value_7, seat_to_player_id)
 
                 random.shuffle(player_indexes)
                 for i in player_indexes:
@@ -281,7 +289,7 @@ def run_simulation(
                             players[i].add_card(main_pile.remove_top_card())
                             num_cards_per_player[i] += 1
                             if len(main_pile) == 0:
-                                discard_pile, main_pile = pausa(log, iter_number, n, players, strategies, top_card, discard_pile, main_pile, current_player, direction, pauses, num_cards_per_player, value_7)
+                                discard_pile, main_pile = pausa(log, iter_number, n, players, strategies, top_card, discard_pile, main_pile, current_player, direction, pauses, num_cards_per_player, value_7, seat_to_player_id)
                             continue
                         num_cards_per_player[i] -= 1
                         log.debug(f"Iter {iter_number}: Player {i} ha saltat amb {str(jump_card)} ({jump_hand_size} -> {jump_hand_size - 1})")

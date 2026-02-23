@@ -4,9 +4,13 @@
 from base.classes import FirstStrategy, RandomStrategy
 
 from strategies.repster_strategies import StratExample
+from strategies.arnau_strategies import ArnauStrategy
+from strategies.feluk_normal_strategies import FElixSuper1
 
 strategies = [
     FirstStrategy,
     RandomStrategy,
     StratExample,
+    ArnauStrategy,
+    FElixSuper1
 ]

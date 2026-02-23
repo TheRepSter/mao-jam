@@ -99,9 +99,10 @@ class Strategy(ABC):
     def cards_not_viewed(self) -> Deck:
         """Return the cards that the player has not seen. Notice this means the player hand is also not viewed."""
         not_viewed = Deck()
-        cards_viewed = self.player.cards + self.discarded_pile.cards
+        cards_viewed = Deck()
+        cards_viewed.cards = self.player.cards + self.discarded_pile.cards
         for card in self.all_cards.cards:
-            if card not in cards_viewed:
+            if card not in cards_viewed.cards:
                 not_viewed.add_card(card)
             else:
                 cards_viewed.remove_card(card) # Es treu per que hi han repetits en cas de que sigui més d'un deck
