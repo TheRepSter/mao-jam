@@ -763,8 +763,8 @@ class AlphaMao(Strategy):
         return card if card is not None else self.player.cards[0]
 
 class DolfiStrategy(Strategy):
-    N_DETERMINIZATIONS = 16
-    N_ROLLOUTS_PER_DET = 10
+    N_DETERMINIZATIONS = 5
+    N_ROLLOUTS_PER_DET = 15
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
