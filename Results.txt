@@ -1,0 +1,501 @@
+[Level 25] [      0.00s]: Running 57 matchups with 8 workers
+[WARNING ] [      0.00s]: File simulator_combined_strategies_2_2_FirstStrategy_FElixSuper1.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_2_2_FirstStrategy_RandomStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_2_2_FirstStrategy_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_2_2_RandomStrategy_FElixSuper1.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_2_2_FirstStrategy_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_2_2_FirstStrategy_ArnauStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_2_2_RandomStrategy_ArnauStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_2_2_RandomStrategy_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_2_2_FirstStrategy_FElixSuper1.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_2_2_RandomStrategy_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_2_2_ArnauStrategy_FElixSuper1.json does not exist
+[Level 25] [      0.49s]: Simulated combination: RandomStrategy vs FElixSuper1
+[Level 25] [      0.49s]: Maos: [0, 70] (total iters: 10,000, extra rounds: 0)
+[Level 25] [      0.49s]: Strategy FElixSuper1 has won the most games with 70 games, congratulations!
+[Level 25] [      0.50s]: Simulated combination: FirstStrategy vs RandomStrategy
+[Level 25] [      0.50s]: Maos: [66, 0] (total iters: 10,000, extra rounds: 0)
+[Level 25] [      0.50s]: Strategy FirstStrategy has won the most games with 66 games, congratulations!
+[WARNING ] [      0.00s]: File simulator_combined_strategies_2_2_ArnauStrategy_AlphaMao.json does not exist
+[Level 25] [      0.59s]: Simulated combination: FirstStrategy vs FElixSuper1
+[Level 25] [      0.59s]: Maos: [206, 154] (total iters: 20,000, extra rounds: 1)
+[Level 25] [      0.59s]: Strategy FirstStrategy has won the most games with 206 games, congratulations! (needed 1 extra round(s), 20,000 iters total)
+[WARNING ] [      0.00s]: File simulator_combined_strategies_2_2_ArnauStrategy_DolfiStrategy.json does not exist
+[Level 25] [      0.79s]: Simulated combination: RandomStrategy vs AlphaMao
+[Level 25] [      0.79s]: Maos: [0, 70] (total iters: 10,000, extra rounds: 0)
+[Level 25] [      0.79s]: Strategy AlphaMao has won the most games with 70 games, congratulations!
+[WARNING ] [      0.00s]: File simulator_combined_strategies_2_2_FElixSuper1_AlphaMao.json does not exist
+[Level 25] [      0.82s]: Simulated combination: RandomStrategy vs ArnauStrategy
+[Level 25] [      0.82s]: Maos: [0, 42] (total iters: 10,000, extra rounds: 0)
+[Level 25] [      0.82s]: Strategy ArnauStrategy has won the most games with 42 games, congratulations!
+[WARNING ] [      0.00s]: File simulator_combined_strategies_2_2_FElixSuper1_DolfiStrategy.json does not exist
+[Level 25] [      1.08s]: Simulated combination: FirstStrategy vs AlphaMao
+[Level 25] [      1.08s]: Maos: [95, 135] (total iters: 10,000, extra rounds: 0)
+[Level 25] [      1.08s]: Strategy AlphaMao has won the most games with 135 games, congratulations!
+[WARNING ] [      0.00s]: File simulator_combined_strategies_2_2_FirstStrategy_ArnauStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_2_2_FElixSuper1_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_2_2_ArnauStrategy_FElixSuper1.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_2_2_FElixSuper1_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_2_2_ArnauStrategy_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_2_2_FirstStrategy_ArnauStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_2_2_AlphaMao_DolfiStrategy.json does not exist
+[Level 25] [      3.67s]: Simulated combination: ArnauStrategy vs FElixSuper1
+[Level 25] [      3.67s]: Maos: [172, 213] (total iters: 20,000, extra rounds: 1)
+[Level 25] [      3.67s]: Strategy FElixSuper1 has won the most games with 213 games, congratulations! (needed 1 extra round(s), 20,000 iters total)
+[WARNING ] [      0.00s]: File simulator_combined_strategies_2_2_FElixSuper1_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_RandomStrategy_ArnauStrategy.json does not exist
+[Level 25] [      5.28s]: Simulated combination: ArnauStrategy vs AlphaMao
+[Level 25] [      5.29s]: Maos: [158, 217] (total iters: 20,000, extra rounds: 1)
+[Level 25] [      5.29s]: Strategy AlphaMao has won the most games with 217 games, congratulations! (needed 1 extra round(s), 20,000 iters total)
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_RandomStrategy_ArnauStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_2_2_FirstStrategy_ArnauStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_RandomStrategy_ArnauStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_RandomStrategy_ArnauStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_2_2_FElixSuper1_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_RandomStrategy_ArnauStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_RandomStrategy_FElixSuper1.json does not exist
+[Level 25] [     10.79s]: Simulated combination: FirstStrategy vs ArnauStrategy
+[Level 25] [     10.79s]: Maos: [781, 681] (total iters: 80,000, extra rounds: 3)
+[Level 25] [     10.79s]: Strategy FirstStrategy has won the most games with 781 games, congratulations! (needed 3 extra round(s), 80,000 iters total)
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_RandomStrategy_FElixSuper1.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_RandomStrategy_FElixSuper1.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_RandomStrategy_FElixSuper1.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_RandomStrategy_FElixSuper1.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_RandomStrategy_ArnauStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_RandomStrategy_AlphaMao.json does not exist
+[Level 25] [     16.63s]: Simulated combination: FElixSuper1 vs AlphaMao
+[Level 25] [     16.63s]: Maos: [1592, 1713] (total iters: 160,000, extra rounds: 4)
+[Level 25] [     16.63s]: Strategy AlphaMao has won the most games with 1713 games, congratulations! (needed 4 extra round(s), 160,000 iters total)
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_RandomStrategy_FElixSuper1.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_RandomStrategy_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_RandomStrategy_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_RandomStrategy_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_RandomStrategy_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_RandomStrategy_FElixSuper1.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_RandomStrategy_ArnauStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_RandomStrategy_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_RandomStrategy_FElixSuper1.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_RandomStrategy_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_RandomStrategy_DolfiStrategy.json does not exist
+[Level 25] [     48.41s]: Simulated combination: FirstStrategy vs DolfiStrategy
+[Level 25] [     48.42s]: Maos: [82, 113] (total iters: 10,000, extra rounds: 0)
+[Level 25] [     48.42s]: Strategy DolfiStrategy has won the most games with 113 games, congratulations!
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_RandomStrategy_ArnauStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_2_2_FElixSuper1_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_2_2_ArnauStrategy_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_2_2_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_RandomStrategy_FElixSuper1.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_ArnauStrategy_FElixSuper1.json does not exist
+[Level 25] [     65.01s]: Simulated combination: FirstStrategy vs RandomStrategy vs AlphaMao
+[Level 25] [     65.01s]: Maos: [3509, 5, 3719] (total iters: 640,000, extra rounds: 6)
+[Level 25] [     65.01s]: Strategy AlphaMao has won the most games with 3719 games, congratulations! (needed 6 extra round(s), 640,000 iters total)
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_ArnauStrategy_FElixSuper1.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_ArnauStrategy_FElixSuper1.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_ArnauStrategy_AlphaMao.json does not exist
+[Level 25] [     72.52s]: Simulated combination: RandomStrategy vs DolfiStrategy
+[Level 25] [     72.52s]: Maos: [0, 45] (total iters: 10,000, extra rounds: 0)
+[Level 25] [     72.52s]: Strategy DolfiStrategy has won the most games with 45 games, congratulations!
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_ArnauStrategy_FElixSuper1.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_ArnauStrategy_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_ArnauStrategy_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_RandomStrategy_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_ArnauStrategy_FElixSuper1.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_ArnauStrategy_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_ArnauStrategy_FElixSuper1.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_ArnauStrategy_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_ArnauStrategy_DolfiStrategy.json does not exist
+[Level 25] [    107.87s]: Simulated combination: FirstStrategy vs ArnauStrategy vs AlphaMao
+[Level 25] [    107.88s]: Maos: [1391, 1352, 1517] (total iters: 160,000, extra rounds: 4)
+[Level 25] [    107.88s]: Strategy AlphaMao has won the most games with 1517 games, congratulations! (needed 4 extra round(s), 160,000 iters total)
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_RandomStrategy_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_RandomStrategy_ArnauStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_ArnauStrategy_FElixSuper1.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_2_2_ArnauStrategy_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_2_2_FElixSuper1_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_2_2_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_ArnauStrategy_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_FElixSuper1_AlphaMao.json does not exist
+[Level 25] [    131.76s]: Simulated combination: FirstStrategy vs RandomStrategy vs FElixSuper1
+[Level 25] [    131.76s]: Maos: [14259, 13, 14729] (total iters: 2,560,000, extra rounds: 8)
+[Level 25] [    131.76s]: Strategy FElixSuper1 has won the most games with 14729 games, congratulations! (needed 8 extra round(s), 2,560,000 iters total)
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_FElixSuper1_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_FElixSuper1_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_FElixSuper1_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_FElixSuper1_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_FElixSuper1_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_ArnauStrategy_FElixSuper1.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_ArnauStrategy_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_FElixSuper1_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_RandomStrategy_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_FElixSuper1_DolfiStrategy.json does not exist
+[Level 25] [    195.06s]: Simulated combination: FirstStrategy vs FElixSuper1 vs AlphaMao
+[Level 25] [    195.06s]: Maos: [5633, 5641, 5939] (total iters: 640,000, extra rounds: 6)
+[Level 25] [    195.06s]: Strategy AlphaMao has won the most games with 5939 games, congratulations! (needed 6 extra round(s), 640,000 iters total)
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_ArnauStrategy_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_RandomStrategy_ArnauStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_FElixSuper1_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_ArnauStrategy_FElixSuper1.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_AlphaMao_DolfiStrategy.json does not exist
+[Level 25] [    220.34s]: Simulated combination: ArnauStrategy vs DolfiStrategy
+[Level 25] [    220.34s]: Maos: [325, 442] (total iters: 40,000, extra rounds: 2)
+[Level 25] [    220.34s]: Strategy DolfiStrategy has won the most games with 442 games, congratulations! (needed 2 extra round(s), 40,000 iters total)
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_RandomStrategy_ArnauStrategy_FElixSuper1.json does not exist
+[Level 25] [    222.40s]: Simulated combination: FElixSuper1 vs DolfiStrategy
+[Level 25] [    222.40s]: Maos: [379, 460] (total iters: 40,000, extra rounds: 2)
+[Level 25] [    222.40s]: Strategy DolfiStrategy has won the most games with 460 games, congratulations! (needed 2 extra round(s), 40,000 iters total)
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_RandomStrategy_ArnauStrategy_AlphaMao.json does not exist
+[Level 25] [    223.13s]: Simulated combination: RandomStrategy vs ArnauStrategy vs FElixSuper1
+[Level 25] [    223.13s]: Maos: [0, 35, 55] (total iters: 10,000, extra rounds: 0)
+[Level 25] [    223.13s]: Strategy FElixSuper1 has won the most games with 55 games, congratulations!
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_RandomStrategy_ArnauStrategy_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_RandomStrategy_ArnauStrategy_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_RandomStrategy_ArnauStrategy_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_RandomStrategy_ArnauStrategy_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_FElixSuper1_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_RandomStrategy_ArnauStrategy_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_RandomStrategy_ArnauStrategy_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_RandomStrategy_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_FElixSuper1_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_ArnauStrategy_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_RandomStrategy_ArnauStrategy_DolfiStrategy.json does not exist
+[Level 25] [    301.76s]: Simulated combination: RandomStrategy vs ArnauStrategy vs AlphaMao
+[Level 25] [    301.77s]: Maos: [2, 3328, 3521] (total iters: 640,000, extra rounds: 6)
+[Level 25] [    301.77s]: Strategy AlphaMao has won the most games with 3521 games, congratulations! (needed 6 extra round(s), 640,000 iters total)
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_RandomStrategy_ArnauStrategy_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_RandomStrategy_ArnauStrategy_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_RandomStrategy_FElixSuper1_AlphaMao.json does not exist
+[Level 25] [    374.43s]: Simulated combination: FirstStrategy vs FElixSuper1 vs DolfiStrategy
+[Level 25] [    374.43s]: Maos: [673, 716, 806] (total iters: 80,000, extra rounds: 3)
+[Level 25] [    374.43s]: Strategy DolfiStrategy has won the most games with 806 games, congratulations! (needed 3 extra round(s), 80,000 iters total)
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_RandomStrategy_FElixSuper1_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_RandomStrategy_FElixSuper1_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_RandomStrategy_FElixSuper1_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_ArnauStrategy_FElixSuper1.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_RandomStrategy_FElixSuper1_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_RandomStrategy_FElixSuper1_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_RandomStrategy_FElixSuper1_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_RandomStrategy_ArnauStrategy_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_RandomStrategy_FElixSuper1_DolfiStrategy.json does not exist
+[Level 25] [    416.41s]: Simulated combination: FirstStrategy vs RandomStrategy vs ArnauStrategy
+[Level 25] [    416.41s]: Maos: [27841, 9, 27365] (total iters: 5,120,000, extra rounds: 9)
+[Level 25] [    416.41s]: Strategy FirstStrategy has won the most games with 27841 games, congratulations! (needed 9 extra round(s), 5,120,000 iters total)
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_RandomStrategy_FElixSuper1_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_RandomStrategy_FElixSuper1_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_RandomStrategy_FElixSuper1_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_RandomStrategy_FElixSuper1_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_RandomStrategy_AlphaMao_DolfiStrategy.json does not exist
+[Level 25] [    482.97s]: Simulated combination: FirstStrategy vs ArnauStrategy vs DolfiStrategy
+[Level 25] [    482.97s]: Maos: [1420, 1377, 1582] (total iters: 160,000, extra rounds: 4)
+[Level 25] [    482.97s]: Strategy DolfiStrategy has won the most games with 1582 games, congratulations! (needed 4 extra round(s), 160,000 iters total)
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_RandomStrategy_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_2_2_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_RandomStrategy_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_RandomStrategy_ArnauStrategy_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_RandomStrategy_FElixSuper1_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_RandomStrategy_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_RandomStrategy_FElixSuper1_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_RandomStrategy_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FirstStrategy_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_RandomStrategy_FElixSuper1_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_ArnauStrategy_FElixSuper1_AlphaMao.json does not exist
+[Level 25] [    691.16s]: Simulated combination: FirstStrategy vs ArnauStrategy vs FElixSuper1
+[Level 25] [    691.17s]: Maos: [44604, 44951, 45664] (total iters: 5,120,000, extra rounds: 9)
+[Level 25] [    691.17s]: Strategy FElixSuper1 has won the most games with 45664 games, congratulations! (needed 9 extra round(s), 5,120,000 iters total)
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_ArnauStrategy_FElixSuper1_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_ArnauStrategy_FElixSuper1_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_RandomStrategy_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_ArnauStrategy_FElixSuper1_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_ArnauStrategy_FElixSuper1_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_ArnauStrategy_FElixSuper1_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_ArnauStrategy_FElixSuper1_DolfiStrategy.json does not exist
+[Level 25] [    793.36s]: Simulated combination: ArnauStrategy vs FElixSuper1 vs AlphaMao
+[Level 25] [    793.36s]: Maos: [2681, 2774, 2968] (total iters: 320,000, extra rounds: 5)
+[Level 25] [    793.36s]: Strategy AlphaMao has won the most games with 2968 games, congratulations! (needed 5 extra round(s), 320,000 iters total)
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_ArnauStrategy_AlphaMao_DolfiStrategy.json does not exist
+[Level 25] [    819.87s]: Simulated combination: ArnauStrategy vs FElixSuper1 vs DolfiStrategy
+[Level 25] [    819.88s]: Maos: [84, 83, 118] (total iters: 10,000, extra rounds: 0)
+[Level 25] [    819.88s]: Strategy DolfiStrategy has won the most games with 118 games, congratulations!
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_RandomStrategy_FElixSuper1_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_ArnauStrategy_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_ArnauStrategy_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[Level 25] [    878.91s]: Simulated combination: RandomStrategy vs FElixSuper1 vs DolfiStrategy
+[Level 25] [    878.91s]: Maos: [0, 860, 954] (total iters: 160,000, extra rounds: 4)
+[Level 25] [    878.91s]: Strategy DolfiStrategy has won the most games with 954 games, congratulations! (needed 4 extra round(s), 160,000 iters total)
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_ArnauStrategy_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_RandomStrategy_ArnauStrategy_FElixSuper1.json does not exist
+[Level 25] [    921.09s]: Simulated combination: RandomStrategy vs ArnauStrategy vs DolfiStrategy
+[Level 25] [    921.09s]: Maos: [0, 826, 928] (total iters: 160,000, extra rounds: 4)
+[Level 25] [    921.09s]: Strategy DolfiStrategy has won the most games with 928 games, congratulations! (needed 4 extra round(s), 160,000 iters total)
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_RandomStrategy_ArnauStrategy_FElixSuper1.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_RandomStrategy_ArnauStrategy_FElixSuper1.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_RandomStrategy_ArnauStrategy_FElixSuper1.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_RandomStrategy_ArnauStrategy_FElixSuper1.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_RandomStrategy_ArnauStrategy_AlphaMao.json does not exist
+[Level 25] [    927.41s]: Simulated combination: RandomStrategy vs AlphaMao vs DolfiStrategy
+[Level 25] [    927.41s]: Maos: [1, 805, 913] (total iters: 160,000, extra rounds: 4)
+[Level 25] [    927.41s]: Strategy DolfiStrategy has won the most games with 913 games, congratulations! (needed 4 extra round(s), 160,000 iters total)
+[Level 25] [    927.51s]: Simulated combination: FirstStrategy vs RandomStrategy vs DolfiStrategy
+[Level 25] [    927.51s]: Maos: [1679, 2, 1857] (total iters: 320,000, extra rounds: 5)
+[Level 25] [    927.51s]: Strategy DolfiStrategy has won the most games with 1857 games, congratulations! (needed 5 extra round(s), 320,000 iters total)
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_RandomStrategy_ArnauStrategy_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_RandomStrategy_ArnauStrategy_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_RandomStrategy_ArnauStrategy_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_RandomStrategy_ArnauStrategy_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_RandomStrategy_ArnauStrategy_FElixSuper1.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_RandomStrategy_ArnauStrategy_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_RandomStrategy_ArnauStrategy_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_RandomStrategy_ArnauStrategy_FElixSuper1.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_RandomStrategy_ArnauStrategy_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_RandomStrategy_ArnauStrategy_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_RandomStrategy_ArnauStrategy_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_RandomStrategy_ArnauStrategy_FElixSuper1.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_RandomStrategy_ArnauStrategy_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_RandomStrategy_FElixSuper1_AlphaMao.json does not exist
+[Level 25] [    982.82s]: Simulated combination: FirstStrategy vs AlphaMao vs DolfiStrategy
+[Level 25] [    982.82s]: Maos: [2680, 2850, 3125] (total iters: 320,000, extra rounds: 5)
+[Level 25] [    982.82s]: Strategy DolfiStrategy has won the most games with 3125 games, congratulations! (needed 5 extra round(s), 320,000 iters total)
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_RandomStrategy_FElixSuper1_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_RandomStrategy_FElixSuper1_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_RandomStrategy_FElixSuper1_DolfiStrategy.json does not exist
+[Level 25] [    985.93s]: Simulated combination: FirstStrategy vs RandomStrategy vs FElixSuper1 vs AlphaMao
+[Level 25] [    985.93s]: Maos: [195, 0, 190, 238] (total iters: 40,000, extra rounds: 2)
+[Level 25] [    985.93s]: Strategy AlphaMao has won the most games with 238 games, congratulations! (needed 2 extra round(s), 40,000 iters total)
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_RandomStrategy_ArnauStrategy_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_RandomStrategy_FElixSuper1_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_RandomStrategy_ArnauStrategy_FElixSuper1.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_RandomStrategy_FElixSuper1_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_RandomStrategy_ArnauStrategy_DolfiStrategy.json does not exist
+[WARNING ] [      0.01s]: File simulator_combined_strategies_2_2_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_RandomStrategy_FElixSuper1_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_RandomStrategy_ArnauStrategy_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_RandomStrategy_ArnauStrategy_FElixSuper1.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_RandomStrategy_FElixSuper1_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_RandomStrategy_ArnauStrategy_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_RandomStrategy_AlphaMao_DolfiStrategy.json does not exist
+[Level 25] [   1190.58s]: Simulated combination: FirstStrategy vs RandomStrategy vs ArnauStrategy vs AlphaMao
+[Level 25] [   1190.59s]: Maos: [12903, 11, 12853, 13532] (total iters: 2,560,000, extra rounds: 8)
+[Level 25] [   1190.59s]: Strategy AlphaMao has won the most games with 13532 games, congratulations! (needed 8 extra round(s), 2,560,000 iters total)
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_ArnauStrategy_FElixSuper1_AlphaMao.json does not exist
+[Level 25] [   1202.41s]: Simulated combination: RandomStrategy vs FElixSuper1 vs AlphaMao
+[Level 25] [   1202.41s]: Maos: [39, 57195, 58180] (total iters: 10,240,000, extra rounds: 10)
+[Level 25] [   1202.41s]: Strategy AlphaMao has won the most games with 58180 games, congratulations! (needed 10 extra round(s), 10,240,000 iters total)
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_ArnauStrategy_FElixSuper1_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_RandomStrategy_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_ArnauStrategy_FElixSuper1_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_ArnauStrategy_FElixSuper1_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_ArnauStrategy_FElixSuper1_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_RandomStrategy_FElixSuper1_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_ArnauStrategy_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_RandomStrategy_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_ArnauStrategy_FElixSuper1_DolfiStrategy.json does not exist
+[Level 25] [   1222.88s]: Simulated combination: FirstStrategy vs ArnauStrategy vs FElixSuper1 vs AlphaMao
+[Level 25] [   1222.88s]: Maos: [1220, 1182, 1174, 1321] (total iters: 160,000, extra rounds: 4)
+[Level 25] [   1222.88s]: Strategy AlphaMao has won the most games with 1321 games, congratulations! (needed 4 extra round(s), 160,000 iters total)
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_ArnauStrategy_FElixSuper1_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_RandomStrategy_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_ArnauStrategy_FElixSuper1_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_ArnauStrategy_FElixSuper1_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_ArnauStrategy_AlphaMao_DolfiStrategy.json does not exist
+[Level 25] [   1291.37s]: Simulated combination: FirstStrategy vs RandomStrategy vs ArnauStrategy vs FElixSuper1
+[Level 25] [   1291.38s]: Maos: [26385, 24, 26161, 26926] (total iters: 5,120,000, extra rounds: 9)
+[Level 25] [   1291.38s]: Strategy FElixSuper1 has won the most games with 26926 games, congratulations! (needed 9 extra round(s), 5,120,000 iters total)
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_ArnauStrategy_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_RandomStrategy_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_ArnauStrategy_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_ArnauStrategy_FElixSuper1_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_ArnauStrategy_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[Level 25] [   1407.78s]: Simulated combination: FirstStrategy vs RandomStrategy vs ArnauStrategy vs DolfiStrategy
+[Level 25] [   1407.78s]: Maos: [1583, 1, 1575, 1759] (total iters: 320,000, extra rounds: 5)
+[Level 25] [   1407.78s]: Strategy DolfiStrategy has won the most games with 1759 games, congratulations! (needed 5 extra round(s), 320,000 iters total)
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_ArnauStrategy_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_RandomStrategy_ArnauStrategy_FElixSuper1_AlphaMao.json does not exist
+[Level 25] [   1411.32s]: Simulated combination: FElixSuper1 vs AlphaMao vs DolfiStrategy
+[Level 25] [   1411.32s]: Maos: [1371, 1449, 1604] (total iters: 160,000, extra rounds: 4)
+[Level 25] [   1411.32s]: Strategy DolfiStrategy has won the most games with 1604 games, congratulations! (needed 4 extra round(s), 160,000 iters total)
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_RandomStrategy_ArnauStrategy_FElixSuper1_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_RandomStrategy_ArnauStrategy_FElixSuper1_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_RandomStrategy_ArnauStrategy_FElixSuper1_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_RandomStrategy_ArnauStrategy_FElixSuper1_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_3_2_ArnauStrategy_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_RandomStrategy_ArnauStrategy_FElixSuper1_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_RandomStrategy_ArnauStrategy_FElixSuper1_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_RandomStrategy_ArnauStrategy_FElixSuper1_DolfiStrategy.json does not exist
+[Level 25] [   1448.88s]: Simulated combination: AlphaMao vs DolfiStrategy
+[Level 25] [   1448.88s]: Maos: [1650, 1859] (total iters: 160,000, extra rounds: 4)
+[Level 25] [   1448.88s]: Strategy DolfiStrategy has won the most games with 1859 games, congratulations! (needed 4 extra round(s), 160,000 iters total)
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_RandomStrategy_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_ArnauStrategy_FElixSuper1_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_RandomStrategy_FElixSuper1_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_RandomStrategy_ArnauStrategy_FElixSuper1_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_RandomStrategy_ArnauStrategy_FElixSuper1_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_RandomStrategy_ArnauStrategy_FElixSuper1_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_RandomStrategy_ArnauStrategy_FElixSuper1_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_ArnauStrategy_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_RandomStrategy_ArnauStrategy_FElixSuper1_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_RandomStrategy_ArnauStrategy_FElixSuper1_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_RandomStrategy_ArnauStrategy_AlphaMao_DolfiStrategy.json does not exist
+[Level 25] [   1683.48s]: Simulated combination: FirstStrategy vs ArnauStrategy vs FElixSuper1 vs DolfiStrategy
+[Level 25] [   1683.49s]: Maos: [2515, 2442, 2421, 2690] (total iters: 320,000, extra rounds: 5)
+[Level 25] [   1683.49s]: Strategy DolfiStrategy has won the most games with 2690 games, congratulations! (needed 5 extra round(s), 320,000 iters total)
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_RandomStrategy_ArnauStrategy_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_RandomStrategy_ArnauStrategy_FElixSuper1_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_RandomStrategy_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_RandomStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[Level 25] [   1710.61s]: Simulated combination: RandomStrategy vs ArnauStrategy vs FElixSuper1 vs AlphaMao
+[Level 25] [   1710.62s]: Maos: [9, 12908, 13119, 13447] (total iters: 2,560,000, extra rounds: 8)
+[Level 25] [   1710.62s]: Strategy AlphaMao has won the most games with 13447 games, congratulations! (needed 8 extra round(s), 2,560,000 iters total)
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_RandomStrategy_ArnauStrategy_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_RandomStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_RandomStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_RandomStrategy_ArnauStrategy_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_ArnauStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[Level 25] [   1760.03s]: Simulated combination: FirstStrategy vs ArnauStrategy vs AlphaMao vs DolfiStrategy
+[Level 25] [   1760.03s]: Maos: [2389, 2349, 2487, 2637] (total iters: 320,000, extra rounds: 5)
+[Level 25] [   1760.03s]: Strategy DolfiStrategy has won the most games with 2637 games, congratulations! (needed 5 extra round(s), 320,000 iters total)
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_RandomStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_ArnauStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_ArnauStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_FirstStrategy_RandomStrategy_ArnauStrategy_FElixSuper1_AlphaMao.json does not exist
+[Level 25] [   1802.06s]: Simulated combination: ArnauStrategy vs AlphaMao vs DolfiStrategy
+[Level 25] [   1802.06s]: Maos: [2715, 2848, 3078] (total iters: 320,000, extra rounds: 5)
+[Level 25] [   1802.06s]: Strategy DolfiStrategy has won the most games with 3078 games, congratulations! (needed 5 extra round(s), 320,000 iters total)
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_FirstStrategy_RandomStrategy_ArnauStrategy_FElixSuper1_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_FirstStrategy_RandomStrategy_ArnauStrategy_FElixSuper1_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_FirstStrategy_RandomStrategy_ArnauStrategy_FElixSuper1_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_RandomStrategy_ArnauStrategy_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_FirstStrategy_RandomStrategy_ArnauStrategy_FElixSuper1_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_ArnauStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_FirstStrategy_RandomStrategy_ArnauStrategy_FElixSuper1_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_RandomStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_FirstStrategy_RandomStrategy_ArnauStrategy_FElixSuper1_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_ArnauStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_FirstStrategy_RandomStrategy_ArnauStrategy_FElixSuper1_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_RandomStrategy_ArnauStrategy_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_FirstStrategy_RandomStrategy_ArnauStrategy_FElixSuper1_DolfiStrategy.json does not exist
+[Level 25] [   1937.87s]: Simulated combination: FirstStrategy vs RandomStrategy vs FElixSuper1 vs DolfiStrategy
+[Level 25] [   1937.87s]: Maos: [3350, 1, 3221, 3529] (total iters: 640,000, extra rounds: 6)
+[Level 25] [   1937.87s]: Strategy DolfiStrategy has won the most games with 3529 games, congratulations! (needed 6 extra round(s), 640,000 iters total)
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_RandomStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_RandomStrategy_ArnauStrategy_FElixSuper1_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_FirstStrategy_RandomStrategy_ArnauStrategy_FElixSuper1_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_FirstStrategy_RandomStrategy_ArnauStrategy_FElixSuper1_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_FirstStrategy_RandomStrategy_ArnauStrategy_FElixSuper1_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_FirstStrategy_RandomStrategy_ArnauStrategy_FElixSuper1_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_ArnauStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_FirstStrategy_RandomStrategy_ArnauStrategy_FElixSuper1_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_FirstStrategy_RandomStrategy_ArnauStrategy_FElixSuper1_AlphaMao.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_FirstStrategy_RandomStrategy_ArnauStrategy_FElixSuper1_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_RandomStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_RandomStrategy_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_FirstStrategy_RandomStrategy_ArnauStrategy_AlphaMao_DolfiStrategy.json does not exist
+[Level 25] [   2175.66s]: Simulated combination: RandomStrategy vs ArnauStrategy vs AlphaMao vs DolfiStrategy
+[Level 25] [   2175.66s]: Maos: [1, 1546, 1681, 1807] (total iters: 320,000, extra rounds: 5)
+[Level 25] [   2175.66s]: Strategy DolfiStrategy has won the most games with 1807 games, congratulations! (needed 5 extra round(s), 320,000 iters total)
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_FirstStrategy_RandomStrategy_ArnauStrategy_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_FirstStrategy_RandomStrategy_ArnauStrategy_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_ArnauStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_FirstStrategy_RandomStrategy_ArnauStrategy_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_FirstStrategy_RandomStrategy_ArnauStrategy_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_FirstStrategy_RandomStrategy_ArnauStrategy_FElixSuper1_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_FirstStrategy_RandomStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[Level 25] [   2260.96s]: Simulated combination: FirstStrategy vs FElixSuper1 vs AlphaMao vs DolfiStrategy
+[Level 25] [   2260.96s]: Maos: [4863, 4772, 5229, 5455] (total iters: 640,000, extra rounds: 6)
+[Level 25] [   2260.96s]: Strategy DolfiStrategy has won the most games with 5455 games, congratulations! (needed 6 extra round(s), 640,000 iters total)
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_FirstStrategy_RandomStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_FirstStrategy_RandomStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_FirstStrategy_RandomStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_FirstStrategy_RandomStrategy_ArnauStrategy_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_FirstStrategy_RandomStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_FirstStrategy_ArnauStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[Level 25] [   2349.40s]: Simulated combination: FirstStrategy vs RandomStrategy vs ArnauStrategy vs FElixSuper1 vs AlphaMao
+[Level 25] [   2349.40s]: Maos: [24275, 31, 23713, 23995, 24710] (total iters: 5,120,000, extra rounds: 9)
+[Level 25] [   2349.40s]: Strategy AlphaMao has won the most games with 24710 games, congratulations! (needed 9 extra round(s), 5,120,000 iters total)
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_FirstStrategy_ArnauStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_FirstStrategy_ArnauStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_FirstStrategy_ArnauStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_RandomStrategy_ArnauStrategy_FElixSuper1_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_FirstStrategy_RandomStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_FirstStrategy_ArnauStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_FirstStrategy_RandomStrategy_ArnauStrategy_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_FirstStrategy_ArnauStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_FirstStrategy_RandomStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_RandomStrategy_ArnauStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[Level 25] [   2628.16s]: Simulated combination: ArnauStrategy vs FElixSuper1 vs AlphaMao vs DolfiStrategy
+[Level 25] [   2628.16s]: Maos: [4854, 4799, 4940, 5315] (total iters: 640,000, extra rounds: 6)
+[Level 25] [   2628.16s]: Strategy DolfiStrategy has won the most games with 5315 games, congratulations! (needed 6 extra round(s), 640,000 iters total)
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_RandomStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_RandomStrategy_ArnauStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_RandomStrategy_ArnauStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_RandomStrategy_ArnauStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_RandomStrategy_ArnauStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_RandomStrategy_ArnauStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_RandomStrategy_ArnauStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_FirstStrategy_RandomStrategy_ArnauStrategy_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_FirstStrategy_ArnauStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_FirstStrategy_RandomStrategy_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_6_2_FirstStrategy_RandomStrategy_ArnauStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[Level 25] [   3087.40s]: Simulated combination: FirstStrategy vs RandomStrategy vs ArnauStrategy vs FElixSuper1 vs DolfiStrategy
+[Level 25] [   3087.41s]: Maos: [2984, 5, 2954, 2968, 3234] (total iters: 640,000, extra rounds: 6)
+[Level 25] [   3087.41s]: Strategy DolfiStrategy has won the most games with 3234 games, congratulations! (needed 6 extra round(s), 640,000 iters total)
+[WARNING ] [      0.00s]: File simulator_combined_strategies_6_2_FirstStrategy_RandomStrategy_ArnauStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_6_2_FirstStrategy_RandomStrategy_ArnauStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_6_2_FirstStrategy_RandomStrategy_ArnauStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_6_2_FirstStrategy_RandomStrategy_ArnauStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_RandomStrategy_ArnauStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_FirstStrategy_RandomStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_FirstStrategy_ArnauStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_FirstStrategy_RandomStrategy_ArnauStrategy_AlphaMao_DolfiStrategy.json does not exist
+[WARNING ] [      0.00s]: File simulator_combined_strategies_4_2_RandomStrategy_ArnauStrategy_FElixSuper1_DolfiStrategy.json does not exist
+[Level 25] [   3645.15s]: Simulated combination: RandomStrategy vs FElixSuper1 vs AlphaMao vs DolfiStrategy
+[Level 25] [   3645.16s]: Maos: [0, 6468, 6542, 6888] (total iters: 1,280,000, extra rounds: 7)
+[Level 25] [   3645.16s]: Strategy DolfiStrategy has won the most games with 6888 games, congratulations! (needed 7 extra round(s), 1,280,000 iters total)
+[WARNING ] [      0.00s]: File simulator_combined_strategies_5_2_RandomStrategy_ArnauStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[Level 25] [   3887.06s]: Simulated combination: FirstStrategy vs RandomStrategy vs FElixSuper1 vs AlphaMao vs DolfiStrategy
+[Level 25] [   3887.07s]: Maos: [5912, 5, 5871, 6087, 6317] (total iters: 1,280,000, extra rounds: 7)
+[Level 25] [   3887.07s]: Strategy DolfiStrategy has won the most games with 6317 games, congratulations! (needed 7 extra round(s), 1,280,000 iters total)
+[WARNING ] [      0.00s]: File simulator_combined_strategies_6_2_FirstStrategy_RandomStrategy_ArnauStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[Level 25] [   4591.07s]: Simulated combination: FirstStrategy vs ArnauStrategy vs FElixSuper1 vs AlphaMao vs DolfiStrategy
+[Level 25] [   4591.07s]: Maos: [8540, 8374, 8299, 8678, 8988] (total iters: 1,280,000, extra rounds: 7)
+[Level 25] [   4591.07s]: Strategy DolfiStrategy has won the most games with 8988 games, congratulations! (needed 7 extra round(s), 1,280,000 iters total)
+[WARNING ] [      0.00s]: File simulator_combined_strategies_6_2_FirstStrategy_RandomStrategy_ArnauStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[Level 25] [   4711.64s]: Simulated combination: FirstStrategy vs RandomStrategy vs AlphaMao vs DolfiStrategy
+[Level 25] [   4711.64s]: Maos: [12902, 8, 13278, 13736] (total iters: 2,560,000, extra rounds: 8)
+[Level 25] [   4711.64s]: Strategy DolfiStrategy has won the most games with 13736 games, congratulations! (needed 8 extra round(s), 2,560,000 iters total)
+[WARNING ] [      0.00s]: File simulator_combined_strategies_6_2_FirstStrategy_RandomStrategy_ArnauStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[Level 25] [   4909.89s]: Simulated combination: RandomStrategy vs ArnauStrategy vs FElixSuper1 vs AlphaMao vs DolfiStrategy
+[Level 25] [   4909.89s]: Maos: [12, 11773, 11985, 12113, 12475] (total iters: 2,560,000, extra rounds: 8)
+[Level 25] [   4909.89s]: Strategy DolfiStrategy has won the most games with 12475 games, congratulations! (needed 8 extra round(s), 2,560,000 iters total)
+[Level 25] [   5062.88s]: Simulated combination: FirstStrategy vs RandomStrategy vs ArnauStrategy vs AlphaMao vs DolfiStrategy
+[Level 25] [   5062.88s]: Maos: [11745, 6, 11703, 12020, 12434] (total iters: 2,560,000, extra rounds: 8)
+[Level 25] [   5062.88s]: Strategy DolfiStrategy has won the most games with 12434 games, congratulations! (needed 8 extra round(s), 2,560,000 iters total)
+[WARNING ] [      0.00s]: File simulator_combined_strategies_6_2_FirstStrategy_RandomStrategy_ArnauStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[Level 25] [   5409.17s]: Simulated combination: RandomStrategy vs ArnauStrategy vs FElixSuper1 vs DolfiStrategy
+[Level 25] [   5409.17s]: Maos: [11, 12640, 13186, 13677] (total iters: 2,560,000, extra rounds: 8)
+[Level 25] [   5409.17s]: Strategy DolfiStrategy has won the most games with 13677 games, congratulations! (needed 8 extra round(s), 2,560,000 iters total)
+[WARNING ] [      0.00s]: File simulator_combined_strategies_6_2_FirstStrategy_RandomStrategy_ArnauStrategy_FElixSuper1_AlphaMao_DolfiStrategy.json does not exist
+[Level 25] [   6907.24s]: Simulated combination: FirstStrategy vs RandomStrategy vs ArnauStrategy vs FElixSuper1 vs AlphaMao vs DolfiStrategy
+[Level 25] [   6907.24s]: Maos: [21749, 23, 20888, 21473, 22075, 22530] (total iters: 5,120,000, extra rounds: 9)
+[Level 25] [   6907.24s]: Strategy DolfiStrategy has won the most games with 22530 games, congratulations! (needed 9 extra round(s), 5,120,000 iters total)
+[Level 25] [   6907.43s]: FINAL RESULTS:
+[Level 25] [   6907.43s]: DolfiStrategy: 31
+[Level 25] [   6907.43s]: AlphaMao: 15
+[Level 25] [   6907.43s]: FElixSuper1: 6
+[Level 25] [   6907.43s]: FirstStrategy: 4
+[Level 25] [   6907.43s]: ArnauStrategy: 1
+[Level 25] [   6907.43s]: RandomStrategy: 0

@@ -41,7 +41,11 @@ No n'hi ha. Quan hi vegi un canvi, ho executaré.
 No n'hi ha però si veig que triga massa al meu ordinador o no tinc suficient memòria, coses de l'estil, ho descartaré.
 
 ## Leaderboard:
-S'inaugurarà el 23 de febrer. 
-| Posició | Àlies |Estratègia  | Victòries |
-|---------|---|---------------|----------|
-| 1 | NO | Encara no | 42
+| Posició | Àlies   | Estratègia     | Victòries |
+|---------|---------|----------------|-----------|
+| 1       | RepSter | DolfiStrategy  | 31        |
+| 2       | RepSter | AlphaMao       | 15        |
+| 3       | feluk   | FElixSuper1    | 6         |
+| 4       | (Base)  | FirstStrategy  | 4         |
+| 5       | arnau   | ArnauStrategy  | 1         |
+| 6       | (Base)  | RandomStrategy | 0         |
