@@ -45,7 +45,7 @@ No n'hi ha però si veig que triga massa al meu ordinador o no tinc suficient me
 |---------|---------|----------------|-----------|
 | 1       | RepSter | DolfiStrategy  | 31        |
 | 2       | RepSter | AlphaMao       | 15        |
-| 3       | feluk   | FElixSuper1    | 6         |
-| 4       | (Base)  | FirstStrategy  | 4         |
+| 3       | feluk   | FElixSuper1    | 7         |
+| 4       | (Base)  | FirstStrategy  | 3         |
 | 5       | arnau   | ArnauStrategy  | 1         |
 | 6       | (Base)  | RandomStrategy | 0         |

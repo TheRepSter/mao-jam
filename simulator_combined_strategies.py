@@ -13,42 +13,45 @@ import time
 
 
 ITER_PER_SIM = int(1e4)
-MAX_ITER_PER_SIM = int(1e7)
+MAX_ITER_PER_SIM = int(1.024e7)
 MAX_EXTRA_ROUNDS = 100
-P_VALUE_THRESHOLD = 0.05
+P_VALUE_THRESHOLD = 0.001
 NUM_DECKS = 2
 
 wins = {strategy.__name__: 0 for strategy in strategies}
 
 
-def _check_significance(maos: list[int]) -> tuple[bool, float, float, float]:
-    """Returns (is_significant, p_bond, p_without_worst, p_best_vs_second)."""
-    maos_np = np.array(maos)
-    n_players = len(maos)
-    total = maos_np.sum()
-    expected = np.full(n_players, total / n_players)
-    _, p_bond = chisquare(maos_np, expected)
+def _check_significance(maos: list[int]) -> tuple[bool, dict[str, float]]:
+    """Returns (is_significant, p_values).
+    All p-values must be <= P_VALUE_THRESHOLD.
 
-    sorted_indices = np.argsort(maos)
-    worst = sorted_indices[0]
+    Tests run depend on number of players:
+      n=2: binomial only
+      n=3: chisquare (all) + binomial
+      n=4: chisquare (all) + chisquare (without worst) + binomial
+      n>=5: chisquare (all) + chisquare (without k worst, k=1..n-3) + binomial
+    """
+    maos_np = np.array(maos)
+    n_players = len(maos_np)
+    sorted_indices = np.argsort(maos_np)
     best = sorted_indices[-1]
     second_best = sorted_indices[-2]
 
-    if n_players > 2:
-        maos_np_without_worst = np.delete(maos_np, worst)
-        total_without_worst = maos_np_without_worst.sum()
-        expected_without_worst = np.full(n_players - 1, total_without_worst / (n_players - 1))
-        _, p_without_worst = chisquare(maos_np_without_worst, expected_without_worst)
-        without_worst_ok = p_without_worst <= P_VALUE_THRESHOLD
-    else:
-        p_without_worst = float("nan")  # not applicable for 2 players
-        without_worst_ok = True
+    p_values: dict[str, float] = {}
 
-    test = binomtest(int(maos[best]), int(maos[best]) + int(maos[second_best]), alternative="two-sided")
-    p_best_vs_second = test.pvalue
+    for k in range(n_players - 2):
+        remaining = np.delete(maos_np, sorted_indices[:k]) if k > 0 else maos_np.copy()
+        n_remaining = len(remaining)
+        expected = np.full(n_remaining, remaining.sum() / n_remaining)
+        _, p = chisquare(remaining, expected)
+        label = "bond_all" if k == 0 else f"bond_without_{k}_worst"
+        p_values[label] = float(p)
 
-    is_significant = p_bond <= P_VALUE_THRESHOLD and without_worst_ok and p_best_vs_second <= P_VALUE_THRESHOLD
-    return is_significant, p_bond, p_without_worst, p_best_vs_second
+    test = binomtest(int(maos_np[best]), int(maos_np[best]) + int(maos_np[second_best]), alternative="two-sided")
+    p_values["binomial"] = test.pvalue
+
+    is_significant = all(p <= P_VALUE_THRESHOLD for p in p_values.values())
+    return is_significant, p_values
 
 
 def build_deck(main_pile, num_decks: int):
@@ -96,12 +99,15 @@ def _run_matchup_worker(
     accumulated_maos = _run_and_read(iters)
 
     extra_rounds = 0
-    while not _check_significance(accumulated_maos)[0] and extra_rounds < MAX_EXTRA_ROUNDS:
+    sig_result = _check_significance(accumulated_maos)
+    while not sig_result[0] and extra_rounds < MAX_EXTRA_ROUNDS:
         proposed_iterations = min((2 ** extra_rounds) * ITER_PER_SIM, MAX_ITER_PER_SIM)
-        log.log(25, f"Extra round with {proposed_iterations:.4g} iterations for combination: {' vs '.join(combo_names)}. p-values: {_check_significance(accumulated_maos)[1:]} for bond, without worst, best vs second. Maos: {accumulated_maos}")
+        p_str = ", ".join(f"{k}: {v:.4f}" for k, v in sig_result[1].items())
+        log.log(25, f"Extra round with {proposed_iterations:.4g} iterations for combination: {' vs '.join(combo_names)}. p-values: {p_str}. Maos: {accumulated_maos}")
         extra_maos = _run_and_read(proposed_iterations)
         extra_rounds += 1
         accumulated_maos = [a + e for a, e in zip(accumulated_maos, extra_maos)]
+        sig_result = _check_significance(accumulated_maos)
 
     return combo_names, accumulated_maos, extra_rounds
 
@@ -140,8 +146,9 @@ if __name__ == "__main__":
             worst_maos = sorted_indices[0]
             wins[names[max_maos]] += 1
 
-            is_significant, p_bond, p_without_worst, p_best_vs_second = _check_significance(maos)
+            is_significant, p_values = _check_significance(maos)
             total_iters = ITER_PER_SIM + sum(min((2 ** r) * ITER_PER_SIM, MAX_ITER_PER_SIM) for r in range(extra_rounds))
+            p_str = ", ".join(f"{k}: {v:.4f}" for k, v in p_values.items())
 
             log.log(25, f"Simulated combination: {' vs '.join(names)}")
             log.log(25, f"Maos: {maos} (total iters: {total_iters:,}, extra rounds: {extra_rounds})")
@@ -150,7 +157,7 @@ if __name__ == "__main__":
                     f"Strategy {names[max_maos]} has won the most games with {maos[max_maos]} games "
                     f"after {extra_rounds} extra round(s), BUT IT'S STILL NOT SIGNIFICANTLY DIFFERENT "
                     f"(cap of {MAX_EXTRA_ROUNDS} extra rounds reached). "
-                    f"P-values — bond: {p_bond:.4f}, without worst: {p_without_worst:.4f}, best vs second: {p_best_vs_second:.4f}"
+                    f"P-values — {p_str}"
                 )
             else:
                 extra_note = f" (needed {extra_rounds} extra round(s), {total_iters:,} iters total)" if extra_rounds > 0 else ""
